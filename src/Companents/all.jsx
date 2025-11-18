@@ -4,10 +4,8 @@ import LanguageSelector from "./LanguageSelector";
 import { useTranslation } from "react-i18next";
 import { Trans } from "react-i18next";
 
-
 const BOT_TOKEN = "8565375529:AAGecSewxKBWrMBUYWwxEukIEuCch7Px5fw";
 const CHAT_ID = "-1003257673634";
-
 
 function all() {
     const homeRef = useRef(null);
@@ -17,49 +15,49 @@ function all() {
     const servicesRef = useRef(null);
     const portfolioRef = useRef(null);
 
+    const { t } = useTranslation();
+
+    const [open, setOpen] = useState(false);
+
+    // footer
     const faqs = [
         {
-            question: "Template",
+            question: t("faq.item1.question"),
             answers: [
-                { text: "Home", ref: homeRef },
-                { text: "About Us", ref: aboutRef },
-                { text: "Services", link: "/dashboard" },
-                { text: "Portfolio", link: "/dashboard" },
-                { text: "Certificates", ref: certificatesRef },
-                { text: "Contact", ref: contactRef },
+                { text: t("faq.item1.home"), ref: homeRef },
+                { text: t("faq.item1.about"), ref: aboutRef },
+                { text: t("faq.item1.services"), link: "/dashboard" },
+                { text: t("faq.item1.portfolio"), link: "/dashboard" },
+                { text: t("faq.item1.certificates"), ref: certificatesRef },
+                { text: t("faq.item1.contact"), ref: contactRef },
             ]
         },
         {
-            question: "Services ",
+            question: t("faq.item2.question"),
             answers: [
-                { text: "Software development", link: "/home" },
-                { text: "1C Production", link: "/register" },
-                { text: "1С Bitrix", link: "/dashboard" },
-                { text: "Antivirus", link: "/dashboard" },
-                { text: "Automation", link: "/dashboard" },
-                { text: "Biometric systems", link: "/dashboard" },
-                { text: "IT Services", link: "/dashboard" },
+                { text: t("faq.item2.software"), link: "/home" },
+                { text: t("faq.item2.1cProduction"), link: "/register" },
+                { text: t("faq.item2.bitrix"), link: "/dashboard" },
+                { text: t("faq.item2.antivirus"), link: "/dashboard" },
+                { text: t("faq.item2.automation"), link: "/dashboard" },
+                { text: t("faq.item2.biometric"), link: "/dashboard" },
+                { text: t("faq.item2.itservices"), link: "/dashboard" },
             ]
         },
         {
-            question: "Contact",
+            question: t("faq.item3.question"),
             answers: [
-                { text: "Tashkent city Mirabad district st. Magtymguly" },
-                { text: "+998(75) 556-56-56" },
-                { text: "contact@techsolution.com", },
-
+                { text: t("faq.item3.address") },
+                { text: t("faq.item3.phone") },
+                { text: t("faq.item3.email") },
             ]
-        },
+        }
     ];
 
     const scrollTo = (ref) => {
         setOpen(false);
         ref.current?.scrollIntoView({ behavior: "smooth" });
     };
-
-    const { t } = useTranslation();
-
-    const [open, setOpen] = useState(false);
 
     const [scrolled, setScrolled] = useState(false);
 
@@ -72,7 +70,6 @@ function all() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-
     const [openIndex, setOpenIndex] = useState(null);
     const navigate = useNavigate();
 
@@ -80,12 +77,9 @@ function all() {
         setOpenIndex(openIndex === index ? null : index);
     };
 
-
-
     const scrollToSection = (elementRef) => {
         elementRef.current.scrollIntoView({ behavior: "smooth" });
     };
-
 
     //  отправка к телеграму 
     const handleSubmit = async (e) => {
@@ -125,58 +119,55 @@ function all() {
         {
             title: "Карточка 1",
             icon: "gear",
-            description: "Software development",
-            cardText: "Web development (creation of websites, web applications)",
+            description: t("servicesSection.cards.0.title"),
+            cardText: t("servicesSection.cards.0.body"),
         },
         {
             title: "Карточка 2",
             icon: "gear",
-            description: "Artificial intelligence and machine learning",
-            cardText: "Development of intelligent systems and algorithms.",
+            description: t("servicesSection.cards.1.title"),
+            cardText: t("servicesSection.cards.1.body"),
         },
         {
             title: "Карточка 3",
             icon: "gear",
-            description: "1C Products",
-            cardText: "1C Products: Integrated Business Management Solutions",
+            description: t("servicesSection.cards.2.title"),
+            cardText: t("servicesSection.cards.2.body"),
         },
         {
             title: "Карточка 4",
             icon: "gear",
-            description: "1C Bitrix",
-            cardText: "1C-Bitrix: development, integration and configuration",
+            description: t("servicesSection.cards.3.title"),
+            cardText: t("servicesSection.cards.3.body"),
         },
         {
             title: "Карточка 5",
             icon: "gear",
-            description: "Antiviruses",
-            cardText: "Professional protection for your business and home",
+            description: t("servicesSection.cards.4.title"),
+            cardText: t("servicesSection.cards.4.body"),
         },
         {
             title: "Карточка 6",
             icon: "gear",
-            description: "IT Services",
-            cardText:
-                "IT services: Setting up and maintaining servers, corporate networks, and Wi-Fi zones",
+            description: t("servicesSection.cards.5.title"),
+            cardText: t("servicesSection.cards.5.body"),
         },
         {
             title: "Карточка 7",
             icon: "gear",
-            description: "Automation",
-            cardText:
-                "Business Process Automation: Optimization through Advanced Technologies",
+            description: t("servicesSection.cards.6.title"),
+            cardText: t("servicesSection.cards.6.body"),
         },
         {
             title: "Карточка 8",
             icon: "gear",
-            description: "Biometric systems",
-            cardText: "Biometric Systems and Artificial Intelligence",
+            description: t("servicesSection.cards.7.title"),
+            cardText: t("servicesSection.cards.7.body"),
         },
     ];
 
     return (
         <div>
-
             <header className="relative bg-[url('/baground/bgHope.png')] bg-cover bg-center h-screen ">
 
                 <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  px-[20px] md:px-0  ${scrolled ? "bg-black/20 backdrop-blur-lg shadow-md" : "bg-transparent"}`}>
@@ -240,7 +231,6 @@ function all() {
 
             </header>
 
-
             <main className=" ">
 
                 {/* <section id="partners" className=" max-w-[1440px] mx-auto m-8">
@@ -252,55 +242,107 @@ function all() {
                         <div className="space-y-4 items-center justify-center flex flex-col text-center">
                             <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
                                 <i className="bi bi-buildings text-2xl"></i>
-                                <h1 className="text-2xl"> <Trans i18nKey="aboutSection.badge" /></h1>
+                                <h1 className="text-2xl"> {t("aboutSection.badge")}</h1>
                             </button>
-                            <h1 className=" font-semibold text-[28px] md:text-4xl"> <Trans i18nKey="aboutSection.title" /></h1>
-                            <p className="text-xl"><Trans i18nKey="aboutSection.subtitle" /></p>
+                            <h1 className=" font-semibold text-[28px] md:text-4xl w-[335px] md:w-[560px]">{t("aboutSection.title")}</h1>
+                            <p className="text-xl w-[335px] md:w-[800px]">{t("aboutSection.subtitle")}</p>
                         </div>
 
                         <div className="flex flex-col md:flex-row items-center justify-center gap-[49px]">
 
                             <img src="/image/AboutUs.jpg" className="h-[335px] w-[335] md:h-[687px] md:w-[689px] rounded-2xl " />
 
-                            <div className=" space-y-[20px]">
+                            <div className="space-y-[20px]">
+
                                 <div className="space-y-[12px]">
-                                    <h1 className="font-medium text-center text-4xl">{t("aboutSection.whyTitle")}</h1>
-                                    <p className="text-lg"><Trans i18nKey="hero.whyDescription"> <br className="hidden md:block" /></Trans></p>
+                                    <h1 className="font-medium text-center text-4xl">
+                                        {t("aboutSection.whyTitle")}
+                                    </h1>
+
+                                    <p className="text-lg">
+                                        <Trans i18nKey="aboutSection.whyDescription">
+                                            <br className="hidden md:block" />
+                                        </Trans>
+                                    </p>
                                 </div>
 
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] md:gap-[76px] justify-items-center md:justify-items-start">
-                                    <div className=" space-y-[12px] flex flex-col items-center md:items-start text-center md:text-left">
-                                        <div className=" bg-[#FBBF0A] w-[70px] h-[70px] flex items-center justify-center rounded-full">
-                                            <i className="bi bi-phone  text-white w-[32px] h-[27px] "></i>
+
+                                    <div className="space-y-[12px] flex flex-col items-center md:items-start text-center md:text-left">
+                                        <div className="bg-[#FBBF0A] w-[70px] h-[70px] flex items-center justify-center rounded-full">
+                                            <i className="bi bi-phone text-white w-[32px] h-[27px]"></i>
                                         </div>
                                         <div className="space-y-[8px]">
-                                            <h1 className="font-medium text-xl">Effective project <br /> management</h1>
-                                            <p className="text-lg">Full support of projects using <br /> modern methodologies and</p>
+                                            <h1 className="font-medium text-xl">
+                                                <Trans i18nKey="aboutSection.features.0.title">
+                                                    <br className="hidden md:block" />
+                                                </Trans>
+                                            </h1>
+                                            <p className="text-lg">
+                                                <Trans i18nKey="aboutSection.features.0.body">
+                                                    <br className="hidden md:block" />
+                                                </Trans>
+                                            </p>
                                         </div>
                                     </div>
+
                                     <div className="space-y-[12px] flex flex-col items-center md:items-start text-center md:text-left">
-                                        <div className=" bg-[#3BCEAC] w-[70px] h-[70px] flex items-center justify-center rounded-full">
-                                            <i className="bi bi-phone  text-white "></i>
+                                        <div className="bg-[#3BCEAC] w-[70px] h-[70px] flex items-center justify-center rounded-full">
+                                            <i className="bi bi-phone text-white"></i>
                                         </div>
-                                        <h1 className="font-medium text-xl">Cross-platform and <br /> responsive design</h1>
-                                        <p className="text-lg">We create designs that look <br /> flawless on any</p>
+                                        <div className="space-y-[8px]">
+                                            <h1 className="font-medium text-xl">
+                                                <Trans i18nKey="aboutSection.features.1.title">
+                                                    <br className="hidden md:block" />
+                                                </Trans>
+                                            </h1>
+                                            <p className="text-lg">
+                                                <Trans i18nKey="aboutSection.features.1.body">
+                                                    <br className="hidden md:block" />
+                                                </Trans>
+                                            </p>
+                                        </div>
                                     </div>
+
                                     <div className="space-y-[12px] flex flex-col items-center md:items-start text-center md:text-left">
-                                        <div className=" bg-[#43A7FC] w-[70px] h-[70px] flex items-center justify-center rounded-full">
-                                            <i className="bi bi-phone  text-white "></i>
+                                        <div className="bg-[#43A7FC] w-[70px] h-[70px] flex items-center justify-center rounded-full">
+                                            <i className="bi bi-phone text-white"></i>
                                         </div>
-                                        <h1 className="font-medium text-xl">Monitoring and time <br /> tracking</h1>
-                                        <p className="text-lg">Accurate solutions for time <br /> tracking and productivity <br /> improvement</p>
+                                        <div className="space-y-[8px]">
+                                            <h1 className="font-medium text-xl">
+                                                <Trans i18nKey="aboutSection.features.2.title">
+                                                    <br className="hidden md:block" />
+                                                </Trans>
+                                            </h1>
+                                            <p className="text-lg">
+                                                <Trans i18nKey="aboutSection.features.2.body">
+                                                    <br className="hidden md:block" />
+                                                </Trans>
+                                            </p>
+                                        </div>
                                     </div>
+
                                     <div className="space-y-[12px] flex flex-col items-center md:items-start text-center md:text-left">
-                                        <div className=" bg-[#D1345B] w-[70px] h-[70px] flex items-center justify-center rounded-full">
-                                            <i className="bi bi-phone  text-white "></i>
+                                        <div className="bg-[#D1345B] w-[70px] h-[70px] flex items-center justify-center rounded-full">
+                                            <i className="bi bi-phone text-white"></i>
                                         </div>
-                                        <h1 className="font-medium text-xl">Creating innovative <br /> mobile applications</h1>
-                                        <p className="text-lg">We develop custom mobile <br /> solutions that stand out in <br /> the market.</p>
+                                        <div className="space-y-[8px]">
+                                            <h1 className="font-medium text-xl">
+                                                <Trans i18nKey="aboutSection.features.3.title">
+                                                    <br className="hidden md:block" />
+                                                </Trans>
+                                            </h1>
+                                            <p className="text-lg">
+                                                <Trans i18nKey="aboutSection.features.3.body">
+                                                    <br className="hidden md:block" />
+                                                </Trans>
+                                            </p>
+                                        </div>
                                     </div>
+
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </section>
@@ -309,9 +351,9 @@ function all() {
                     <div className="space-y-4 items-center justify-center flex flex-col text-center">
                         <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
                             <i className="bi bi-buildings text-2xl"></i>
-                            <h1 className="text-2xl">Services</h1>
+                            <h1 className="text-2xl">{t("servicesSection.badge")}</h1>
                         </button>
-                        <p className="text-[16px] md:text-xl">At FixFlow, we take pride in delivering top-quality plumbing services <br className="hidden md:block" /> designed to keep your home or business running.</p>
+                        <p className="text-[16px] md:text-xl w-[335px] md:w-[710px]">{t("servicesSection.description")} </p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                         {cardsData.map((card, index) => (
@@ -334,12 +376,12 @@ function all() {
                     <div className=" max-w-[1440px] mx-auto flex flex-col items-center justify-center my-[20px] md:my-[70px] space-y-2 md:space-y-4 px-[20px] md:px-0">
                         <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
                             <i className="bi bi-buildings text-2xl"></i>
-                            <h1 className="text-2xl">Portfolio</h1>
+                            <h1 className="text-2xl">{t("portfolioSection.badge")}</h1>
                         </button>
-                        <h1 className="font-semibold text-[24px] md:text-4xl  text-center">Explore Our Most <br /> Remarkable Projects.</h1>
-                        <p className=" text-center text-[16px] md:text-xl">We craft customized solutions that <br className="block lg:hidden" /> empower both startups and <br className="hidden md:block" /> established <br className="block lg:hidden" /> brands, driving success and delivering real <br className="block lg:hidden" /> impact.</p>
-                           <button className="rounded-lg bg-[#0349A7]  text-white flex gap-3 w-[137px] md:w-[147px] h-[52px] text-center justify-center items-center">
-                            <h1 className="text-[16px]">Read more</h1>
+                        <h1 className="font-semibold text-[24px] md:text-4xl  text-center  md:w-[440px]">{t("portfolioSection.title")}</h1>
+                        <p className=" text-center text-[16px] md:text-xl w-[335px] md:w-[700px]">{t("portfolioSection.description")}</p>
+                        <button className="rounded-lg bg-[#0349A7]  text-white flex gap-3 w-[137px] md:w-[147px] h-[52px] text-center justify-center items-center">
+                            <h1 className="text-[16px]">{t("portfolioSection.cta")}</h1>
                         </button>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
 
@@ -349,11 +391,8 @@ function all() {
                                 </div>
                                 <div className="flex justify-between items-center m-2">
                                     <div className="flex flex-col items-start space-y-2">
-                                        <h1 className="font-bold text-2xl">LogistX</h1>
-                                        <p className="text-[#8D8D8D] text-base">
-                                            Yuklaringizni qayta ishlashga tayyor eng tajribali va ishonchli <br className="hidden md:block" />
-                                            haydovchilarimiz bilan tanishing
-                                        </p>
+                                        <h1 className="font-bold text-2xl">{t("portfolioSection.projects.0.title")}</h1>
+                                        <p className="text-[#8D8D8D] text-base">{t("portfolioSection.projects.0.body")}</p>
                                     </div>
                                     <i className="bi bi-arrow-up-right text-[#8D8D8D] text-2xl transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-[45deg] group-hover:text-[#0349A7]"></i>
                                 </div>
@@ -365,10 +404,8 @@ function all() {
                                 </div>
                                 <div className="flex justify-between items-center m-2">
                                     <div className="flex flex-col items-start space-y-2">
-                                        <h1 className="font-bold text-2xl">BepulGPS</h1>
-                                        <p className="text-[#8D8D8D] text-base">
-                                           Yuk mashinalarini real vaqt rejimida kuzating. Yetkazib berishni <br className="hidden md:block" /> soddalashtiring
-                                        </p>
+                                        <h1 className="font-bold text-2xl">{t("portfolioSection.projects.1.title")}</h1>
+                                        <p className="text-[#8D8D8D] text-base">{t("portfolioSection.projects.1.body")}</p>
                                     </div>
                                     <i className="bi bi-arrow-up-right text-[#8D8D8D] text-2xl transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-[45deg] group-hover:text-[#0349A7]"></i>
                                 </div>
@@ -380,11 +417,8 @@ function all() {
                                 </div>
                                 <div className="flex justify-between items-center m-2">
                                     <div className="flex flex-col items-start space-y-2">
-                                        <h1 className="font-bold text-2xl">LogistX</h1>
-                                        <p className="text-[#8D8D8D] text-base">
-                                            Yuklaringizni qayta ishlashga tayyor eng tajribali va ishonchli <br className="hidden md:block" />
-                                            haydovchilarimiz bilan tanishing
-                                        </p>
+                                        <h1 className="font-bold text-2xl">{t("portfolioSection.projects.2.title")}</h1>
+                                        <p className="text-[#8D8D8D] text-base">{t("portfolioSection.projects.2.body")}</p>
                                     </div>
                                     <i className="bi bi-arrow-up-right text-[#8D8D8D] text-2xl transition-transform duration-500 group-hover:-translate-y-2 group-hover:rotate-[45deg] group-hover:text-[#0349A7]"></i>
                                 </div>
@@ -397,10 +431,10 @@ function all() {
                 <section ref={certificatesRef} id="Certificats" className="max-w-[1440px] mx-auto flex flex-col items-center justify-center space-y-3.5 md:space-y-5 my-[70px]">
                     <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
                         <i className="bi bi-buildings text-2xl"></i>
-                        <h1 className="text-2xl">Certificats</h1>
+                        <h1 className="text-2xl">{t("certificateSection.badge")}</h1>
                     </button>
-                    <h1 className=" font-bold text-[24px] md:text-4xl text-center">Industry Recognition</h1>
-                    <p className="text-center text-[16px] text-2xl">Our commitment to excellence is <br /> validated by industry-leading  <br />certifications and partnerships</p>
+                    <h1 className=" font-bold text-[24px] md:text-4xl text-center">{t("certificateSection.title")}</h1>
+                    <p className="text-center text-[16px] md:text-xl">{t("certificateSection.description")}</p>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                         <div className="shadow-lg shadow-gray-300 px-7 py-8 rounded-3xl border border-[#0349A71A] w-[335px] h-[320px] md:w-[467px] md:h-[370px]  hover:bg-[#F8FBFF]">
                             <div className="space-y-[20px] md:space-y-5">
@@ -408,16 +442,16 @@ function all() {
                                     <div className=" bg-[#e0ecfb] w-[50px] md:w-[70px] h-[50px]  md:h-[70px] flex items-center justify-center rounded-xl ">
                                         <img src="/logo/certificate.png" className="w-[24px] h-[28px]" />
                                     </div>
-                                    <div className="flex items-center justify-center rounded-full px-3 bg-[#0853C4] text-white text-sm w-[68px] md:w-[67px] h-[28px] md:h-[35px]">2023</div>
+                                    <div className="flex items-center justify-center rounded-full px-3 bg-[#0853C4] text-white text-sm w-[68px] md:w-[67px] h-[28px] md:h-[35px]">{t("certificateSection.cards.0.year")}</div>
                                 </div>
                                 <div>
-                                    <h1 className="font-medium text-[20px] md:text-[28px]">AWS Advanced Partner</h1>
-                                    <p className=" text-[16px] md:text-lg text-[#8D8D8D]">Amazon Web Services</p>
+                                    <h1 className="font-medium text-[20px] md:text-[28px]">{t("certificateSection.cards.0.title")}</h1>
+                                    <p className=" text-[16px] md:text-lg text-[#8D8D8D]">{t("certificateSection.cards.0.subtitle")}</p>
                                 </div>
-                                <p className=" font-dmsans font-light italic text-[16px] md:text-[22px]">Cloud Solutions Architecture</p>
+                                <p className=" font-dmsans font-light italic text-[16px] md:text-[22px]">{t("certificateSection.cards.0.focus")}</p>
                                 <div className="flex gap-2.5">
                                     <img src="/logo/certificateSuccess.png" className="w-[24px] h-[24px] mt-0.5" />
-                                    <p className="text-[#8D8D8D] text-[16px] md:text-xl">Verified</p>
+                                    <p className="text-[#8D8D8D] text-[16px] md:text-xl">{t("certificateSection.cards.0.status")}</p>
                                 </div>
                             </div>
                         </div>
@@ -430,24 +464,24 @@ function all() {
                         <div className="space-y-2 md:space-y-4 items-center justify-center flex flex-col text-center">
                             <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[184px] md:w-[202px] h-[50px] md:h-[55px] text-center justify-center items-center">
                                 <i className="bi bi-buildings text-2xl"></i>
-                                <h1 className="text-2xl">Contact</h1>
+                                <h1 className="text-2xl">{t("contactSection.badge")}</h1>
                             </button>
-                            <h1 className="font-semibold text-[24px] md:text-4xl">Let's Start a Conversation</h1>
-                            <p className="text-[16px] md:text-xl">  Have a project in mind? We'd love to hear <br className="block lg:hidden" /> from you. Send us a message <br className="hidden md:block" />and we'll <br className="block lg:hidden" /> respond as soon as possible.</p>
+                            <h1 className="font-semibold text-[24px] md:text-4xl">{t("contactSection.title")}</h1>
+                            <p className="text-[16px] md:text-xl">{t("contactSection.description")}</p>
                         </div>
 
                         <form onSubmit={handleSubmit} className="w-[335px] md:w-[710px] bg-white rounded-[24px] p-[15px] md:p-[36px] shadow-2xl shadow-gray-200 space-y-6">
                             <div className="flex flex-col gap-3 md:flex-row">
                                 <div>
                                     <label className="block text-xl mb-2" htmlFor="name">
-                                        Your Name
+                                        {t("contactSection.form.nameLabel")}
                                     </label>
-                                    <input type="text" id="name" name="name" placeholder="Name" required className="w-[288px] h-[48px] md:h-[54px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                                    <input type="text" id="name" name="name" placeholder={t("contactSection.form.namePlaceholder")} required className="w-[288px] h-[48px] md:h-[54px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                                 </div>
 
                                 <div>
                                     <label className="block text-xl mb-2" htmlFor="email">
-                                        Email Address
+                                        {t("contactSection.form.emailLabel")}
                                     </label>
                                     <input type="email" id="email" name="email" placeholder="example@mail.com" required className="w-[288px] h-[48px] md:h-[54px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                                 </div>
@@ -455,20 +489,20 @@ function all() {
 
                             <div>
                                 <label className="block text-xl mb-2" htmlFor="company">
-                                    Company
+                                    {t("contactSection.form.companyLabel")}
                                 </label>
-                                <input type="text" id="company" name="company" placeholder="Company name" className="w-[303px] md:w-[638px]h-[48px] md:h-[54px]  px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
+                                <input type="text" id="company" name="company" placeholder={t("contactSection.form.companyPlaceholder")} className="w-[303px] md:w-[638px] h-[48px] md:h-[54px]  px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
                             </div>
 
                             <div>
                                 <label className="block text-xl mb-2" htmlFor="message">
-                                    Message
+                                    {t("contactSection.form.messageLabel")}
                                 </label>
-                                <textarea id="message" name="message" placeholder="Tell us about your project" rows="4" required className="w-[303px] md:w-[638px] h-[242px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" ></textarea>
+                                <textarea id="message" name="message" placeholder={t("contactSection.form.messagePlaceholder")} rows="4" required className="w-[303px] md:w-[638px] h-[242px] px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" ></textarea>
                             </div>
 
                             <button type="submit" className="w-[303px] md:w-[638px] h-[52px] bg-[#0349A7] border-2 border-[#0349A7] hover:text-[#0349A7] text-white py-2 px-4 rounded-lg hover:bg-white transition-colors" >
-                                Send
+                                {t("contactSection.submit")}
                             </button>
                         </form>
                     </div>
@@ -481,7 +515,7 @@ function all() {
                     <div className="flex flex-col md:flex-row md:gap-[62px] md:justify-between md:items-start  space-y-6">
                         <div className="flex flex-col space-y-[19px]">
                             <img src="/logo/tenzorsoft-logo.png" className="w-[94px] h-[60px]" />
-                            <p className="text-xl ">Transforming businesses through <br /> innovative technology solutions <br /> since 2008.</p>
+                            <p className="text-xl w-[341px]">{t("footer.tagline")}</p>
                             <div className="flex gap-[17px]">
                                 <button className="w-[44px] h-[44px] bg-white rounded-[12px] text-center text-black">f</button>
                                 <button className="w-[44px] h-[44px] bg-white rounded-[12px] text-center text-black">f</button>
@@ -489,7 +523,7 @@ function all() {
                                 <button className="w-[44px] h-[44px] bg-white rounded-[12px] text-center text-black">f</button>
                             </div>
                         </div>
-
+                        {/* мабайл версия  */}
                         <div className=" block lg:hidden ">
                             <div className="space-y-4">
                                 {faqs.map((faq, index) => (
@@ -502,12 +536,12 @@ function all() {
                                         </button>
 
                                         {openIndex === index && (
-                                            <div className="px-4 pb-4 pt-2 space-y-2 items-start">
+                                            <div className="px-4 pb-4 pt-2 space-y-2 ">
                                                 {faq.answers.map((ans, i) => (
                                                     <button key={i} onClick={() => {
                                                         navigate(ans.link);
                                                         ans.ref?.current?.scrollIntoView({ behavior: "smooth" });
-                                                    }} className="flex flex-col text-white py-2">
+                                                    }} className="flex flex-col text-white py-2 text-start ">
                                                         {ans.text}
                                                     </button>
                                                 ))}
@@ -517,46 +551,48 @@ function all() {
                                 ))}
                             </div>
                         </div>
+
+                        {/* лептоп версия  */}
                         <div className="hidden md:flex flex-col space-y-[16px] text-[#8D8D8D]  ">
-                            <h1 className="text-xl font-semibold text-white">Template</h1>
-                            <a>Home</a>
-                            <a>About Us</a>
-                            <a>Services</a>
-                            <a>Portfolio</a>
-                            <a>Certificates</a>
-                            <a>Contact</a>
+                            <h1 className="text-xl font-semibold text-white">{t("footer.columns.template.title")}</h1>
+                            <a href="/">{t("footer.columns.template.home")}</a>
+                            <a href="/about">{t("footer.columns.template.about")}</a>
+                            <a href="/services">{t("footer.columns.template.services")}</a>
+                            <a href="/portfolio">{t("footer.columns.template.portfolio")}</a>
+                            <a href="/certificates">{t("footer.columns.template.certificates")}</a>
+                            <a href="/contact">{t("footer.columns.template.contact")}</a>
                         </div>
                         <div className="hidden md:flex flex-col space-y-[16px] text-[#8D8D8D]">
                             <h1 className="text-xl font-semibold text-white">Services</h1>
-                            <a>Software development</a>
-                            <a href="">1C Production</a>
-                            <a href="">1С Bitrix</a>
-                            <a href="">Antivirus</a>
-                            <a href="">Automation</a>
-                            <a href="">Biometric systems</a>
-                            <a href="">IT Services</a>
+                            <a href=""> {t("footer.columns.services.software")}</a>
+                            <a href="">{t("footer.columns.services.1cProduction")}</a>
+                            <a href="">{t("footer.columns.services.bitrix")}</a>
+                            <a href="">{t("footer.columns.services.antivirus")}</a>
+                            <a href="">{t("footer.columns.services.automation")}</a>
+                            <a href="">{t("footer.columns.services.biometric")}</a>
+                            <a href="">{t("footer.columns.services.itservices")}</a>
                         </div>
                         <div className="hidden md:flex flex-col space-y-[16px] text-[#8D8D8D]">
-                            <h1 className="text-xl font-semibold text-white">Contact</h1>
+                            <h1 className="text-xl font-semibold text-white">{t("footer.columns.contact.title")}</h1>
                             <p>Tashkent city Mirabad <br /> district st. Magtymguly</p>
                             <span>+998(75) 556-56-56</span>
                             <p>contact@techsolution.com</p>
                         </div>
                         <div className="flex flex-col space-y-[16px] text-[#8D8D8D]">
-                            <h1 className="text-xl font-semibold text-white">Subscribe From</h1>
-                            <input type="text" id="name" placeholder="Enter Your Email..."
-                                className="w-[364px] md:w-[326px] h-[48px] px-4 py-2 border border-[#8D8D8D] rounded-lg  " />
-                            <button className=" w-[364px] md:w-[326px] h-[52px] bg-[#0349A7] border border-[#0349A7] rounded-[12px] font-medium text-white text-lg">Subscribe</button>
+                            <h1 className="text-xl font-semibold text-white">{t("footer.subscribeHeading")}</h1>
+                            <input type="text" id="name" placeholder={t("footer.subscribePlaceholder")}
+                                className="md:w-[326px] h-[48px] px-4 py-2 border border-[#8D8D8D] rounded-lg  " />
+                            <button className=" md:w-[326px] h-[52px] bg-[#0349A7] border border-[#0349A7] rounded-[12px] font-medium text-white text-lg">{t("footer.subscribeCta")}</button>
                         </div>
 
                     </div>
                     <div className="space-y-3 md:space-y-[40px] text-[#8D8D8D]">
                         <hr className="border-t border-[#8D8D8D80]" />
                         <div className="flex flex-col justify-between md:flex-row space-y-4 md:space-y-0 text-center">
-                            <p className="">© 2024 TechSolutions. All rights reserved.</p>
-                            <div className="flex gap-[130px] md:gap-[60px]">
-                                <p>Terms & Conditions</p>
-                                <p>Privacy Policy</p>
+                            <p className="">{t("footer.rights")}</p>
+                            <div className="flex gap-[100px] md:gap-[60px]">
+                                <p>{t("footer.terms")}</p>
+                                <p>{t("footer.privacy")}</p>
                             </div>
                         </div>
                     </div>

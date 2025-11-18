@@ -13,10 +13,11 @@
     "description": "We offer cutting-edge IT solutions and modern technologies that will <br/> help your business stay one step ahead of the competition.",
     "cta": "Read More"
   },
+  
   "aboutSection": {
     "badge": "About Us",
-    "title": "We Create Bunch Of <br/> Enthusiastic & Creative Minds",
-    "subtitle": "Tenzor Soft LLC is a leading software developer in Uzbekistan, operating <br /> in the IT services market since 2008. For over 15 years, we have been delivering reliable digital solutions.",
+    "title": "We Create Bunch Of Enthusiastic & Creative Minds",
+    "subtitle": "Tenzor Soft LLC is a leading software developer in Uzbekistan, operating in the IT services market since 2008. For over 15 years, we have been delivering reliable digital solutions.",
     "whyTitle": "Why Choose Us?",
     "whyDescription": "With over 15 years of experience  in the IT industry, we've established <0/> ourselves as a trusted partner for businesses seeking innovative solutions. <0/> Our team of experts brings together diverse skills and perspectives to tackle <0/> even the most complex challenges.",
     "features": [
@@ -38,6 +39,7 @@
       }
     ]
   },
+
   "servicesSection": {
     "badge": "Services",
     "description": "At FixFlow, we take pride in delivering top-quality plumbing services designed to keep your home or business running.",
@@ -76,6 +78,7 @@
       }
     ]
   },
+
   "portfolioSection": {
     "badge": "Portfolio",
     "title": "Explore Our Most Remarkable Projects.",
@@ -91,11 +94,12 @@
         "body": "Track your trucks in real time and simplify the delivery process."
       },
       {
-        "title": "LogistX",
-        "body": "Meet our most experienced and reliable drivers who are ready to process your cargo."
+        "title": "XMed",
+        "body": "XMed – uyingizdan chiqmasdan tibbiy maslahat oladigan, onlayn shifokor qabul tizimi."
       }
     ]
   },
+
   "certificateSection": {
     "badge": "Certificats",
     "title": "Industry Recognition",
@@ -110,6 +114,7 @@
       }
     ]
   },
+
   "contactSection": {
     "badge": "Contact",
     "title": "Let's Start a Conversation",
@@ -126,31 +131,28 @@
     },
     "submit": "Send"
   },
+  
   "footer": {
     "tagline": "Transforming businesses through innovative technology solutions since 2008.",
     "columns": {
       "template": {
         "title": "Template",
-        "links": [
-          "Home",
-          "About Us",
-          "Services",
-          "Portfolio",
-          "Certificates",
-          "Contact"
-        ]
+          "home": "Home",
+          "about": "About Us",
+          "services": "Services",
+          "portfolio": "Portfolio",
+          "certificates": "Certificates",
+          "contact": "Contact"
       },
       "services": {
         "title": "Services",
-        "links": [
-          "Software development",
-          "1C Production",
-          "1С Bitrix",
-          "Antivirus",
-          "Automation",
-          "Biometric systems",
-          "IT Services"
-        ]
+          "software": "Software development",
+          "1cProduction": "1C Production",
+          "bitrix": "1C Bitrix",
+          "antivirus": "Antivirus solutions",
+          "automation": "Automation",
+          "biometric": "Biometric systems",
+          "itservices": "IT Services"
       },
       "contact": {
         "title": "Contact",
@@ -166,38 +168,39 @@
     "terms": "Terms & Conditions",
     "privacy": "Privacy Policy"
   },
+
   "faq": {
     "items": [
       {
         "question": "Template",
-        "answers": [
-          "Home",
-          "About Us",
-          "Services",
-          "Portfolio",
-          "Certificates",
-          "Contact"
-        ]
+        "answers": {
+          "home": "Home",
+          "about": "About Us",
+          "services": "Services",
+          "portfolio": "Portfolio",
+          "certificates": "Certificates",
+          "contaёct": "Contact"
+        }
       },
       {
         "question": "Services",
-        "answers": [
-          "Software development",
-          "1C Production",
-          "1С Bitrix",
-          "Antivirus",
-          "Automation",
-          "Biometric systems",
-          "IT Services"
-        ]
+        "answers": {
+          "software": "Software development",
+          "1cProduction": "1C Production",
+          "bitrix": "1C Bitrix",
+          "antivirus": "Antivirus solutions",
+          "automation": "Automation",
+          "biometric": "Biometric systems",
+          "itservices": "IT Services"
+        }
       },
       {
         "question": "Contact",
-        "answers": [
-          "Tashkent city Mirabad district st. Magtymguly",
-          "+998(75) 556-56-56",
-          "contact@techsolution.com"
-        ]
+        "answers": {
+          "address": "Tashkent city, Mirabad district, Magtymguly street",
+          "phone": "+998 (75) 556-56-56",
+          "email": "contact@techsolution.com"
+        }
       }
     ]
   }

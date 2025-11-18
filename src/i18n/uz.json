@@ -131,26 +131,22 @@
     "columns": {
       "template": {
         "title": "Shablon",
-        "links": [
-          "Bosh sahifa",
-          "Biz haqimizda",
-          "Xizmatlar",
-          "Portfolio",
-          "Sertifikatlar",
-          "Bog'lanish"
-        ]
+          "home": "Bosh sahifa",
+          "about": "Biz haqimizda",
+          "services": "Xizmatlar",
+          "portfolio": "Portfolio",
+          "certificates": "Sertifikatlar",
+          "contact": "Aloqa"
       },
       "services": {
         "title": "Xizmatlar",
-        "links": [
-          "Dasturiy ta'minot ishlab chiqish",
-          "1C ishlab chiqarish",
-          "1C Bitrix",
-          "Antiviruslar",
-          "Avtomatlashtirish",
-          "Biometrik tizimlar",
-          "IT xizmatlari"
-        ]
+         "software": "Dasturiy ta'minot ishlab chiqish",
+          "1cProduction": "1C Ishlab chiqarish",
+          "bitrix": "1C Bitrix",
+          "antivirus": "Antivirus yechimlari",
+          "automation": "Avtomatlashtirish",
+          "biometric": "Biometrik tizimlar",
+          "itservices": "IT xizmatlari"
       },
       "contact": {
         "title": "Bog'lanish",
@@ -166,39 +162,35 @@
     "terms": "Foydalanish shartlari",
     "privacy": "Maxfiylik siyosati"
   },
+
   "faq": {
-    "items": [
-      {
+   "item1":{
         "question": "Shablon",
-        "answers": [
-          "Bosh sahifa",
-          "Biz haqimizda",
-          "Xizmatlar",
-          "Portfolio",
-          "Sertifikatlar",
-          "Bog'lanish"
-        ]
+        "home": "Bosh sahifa",
+        "about": "Biz haqimizda",
+        "services": "Xizmatlar",
+        "portfolio": "Portfolio",
+        "certificates": "Sertifikatlar",
+        "contact": "Aloqa"
       },
-      {
+
+     "item2":{
         "question": "Xizmatlar",
-        "answers": [
-          "Dasturiy ta'minot ishlab chiqish",
-          "1C ishlab chiqarish",
-          "1C Bitrix",
-          "Antiviruslar",
-          "Avtomatlashtirish",
-          "Biometrik tizimlar",
-          "IT xizmatlari"
-        ]
+        "software": "Dasturiy ta'minot ishlab chiqish",
+        "1cProduction": "1C Ishlab chiqarish",
+        "bitrix": "1C Bitrix",
+        "antivirus": "Antivirus yechimlari",
+        "automation": "Avtomatlashtirish",
+       "biometric": "Biometrik tizimlar",
+       "itservices": "IT xizmatlari"
       },
-      {
-        "question": "Bog'lanish",
-        "answers": [
-          "Toshkent shahri, Mirobod tumani, Maxtumquli ko'chasi",
-          "+998(75) 556-56-56",
-          "contact@techsolution.com"
-        ]
+
+    "item3":{
+        "question": "Aloqa",
+          "address": "Toshkent shahri, Mirobod tumani, Maxtumquli ko'chasi",
+          "phone": "+998 (75) 556-56-56",
+          "email": "contact@techsolution.com"
       }
-    ]
+  
   }
 }
