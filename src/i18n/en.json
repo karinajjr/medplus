@@ -79,58 +79,7 @@
     ]
   },
 
-  "portfolioSection": {
-    "badge": "Portfolio",
-    "title": "Explore Our Most Remarkable Projects.",
-    "description": "We craft customized solutions that empower both startups and established brands, driving success and delivering real impact.",
-    "cta": "Read more",
-    "projects": [
-      {
-        "title": "LogistX",
-        "body": "Meet our most experienced and reliable drivers who are ready to process your cargo."
-      },
-      {
-        "title": "BepulGPS",
-        "body": "Track your trucks in real time and simplify the delivery process."
-      },
-      {
-        "title": "XMed",
-        "body": "XMed is an online doctor appointment system that allows you to receive medical advice without leaving your home."
-      }
-    ]
-  },
-"certificateSection": {
-  "badge": "Certificats",
-  "title": "Industry Recognition",
-  "description": "Our commitment to excellence is validated by industry-leading certifications and partnerships",
 
-  "cards": [
-    {
-      "title": "TENZOR SOFT",
-      "subtitle": "IT PRAK",
-      "focus": "Officially recognized as an IT Park resident",
-      "status": "Verified",
-     "modalTitle" : "IT PRAK",
-      "year": "2021"
-    },
-    {
-      "title": "NOVA RENESSANS",
-      "subtitle": "IT PRAK",
-      "focus": "Officially recognized as an IT Park resident",
-      "status": "Completed",
-      "modalTitle" : "IT PRAK",
-      "year": "2025"
-    },
-    {
-      "title": "Frontend Bootcamp",
-      "subtitle": "Programming Academy",
-      "focus": "React, UI/UX, Modern Web Technologies",
-      "status": "Verified",
-      "modalTitle" : "IT PRAK",
-      "year": "2024"
-    }
-  ]
-},
 
 
   "contactSection": {

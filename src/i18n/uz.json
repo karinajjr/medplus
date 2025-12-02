@@ -9,9 +9,11 @@
     "readMore": "Batafsil o'qish"
   },
   "hero": {
-    "title": "IT yechimlari <br/> va texnologiyalari",
-    "description": "Biz biznesingizni raqobatchilardan bir qadam oldinda ushlab turishga <br/> yordam beradigan ilg'or IT yechimlari va zamonaviy texnologiyalarni taklif etamiz.",
-    "cta": "Batafsil o'qish"
+    "title": "Zamonaviy Tibbiyot Sizning Qo'lingizda",
+    "description": "Mutaxassislar bilan Internet orqali videoqo'ng'iroq formatida to'g'ridan-to'g'ri bog'lanish imkoniyati. Xuddi an'anaviy qabuldagidek, yuzma-yuz muloqot qiling.",
+    "cta": "Shifokor qabuliga yozilish",
+    "doktor": "Shifokorlar",
+    "users" : "Foydalanuvchilar"
   },
   "aboutSection": {
     "badge": "Biz haqimizda",
@@ -39,8 +41,7 @@
     ]
   },
   "servicesSection": {
-    "badge": "Xizmatlar",
-    "description": "Siz uchun strategik va samarali huquqiy yechimlarni taqdim etish",
+    "badge": "Sizni nima bezovta qiladi?",
     "cards": [
       {
         "title": "Dasturiy ta'minot ishlab chiqish",
@@ -76,60 +77,6 @@
       }
     ]
   },
-  "portfolioSection": {
-    "badge": "Portfolio",
-    "title": "Eng ajoyib loyihalarimizni kashf eting.",
-    "description": "Biz startaplar va yirik brendlarni muvaffaqiyatga yetaklaydigan, real ta'sir ko'rsatadigan moslashtirilgan yechimlarni yaratamiz.",
-    "cta": "Batafsil o'qish",
-    "projects": [
-      {
-        "title": "LogistX",
-        "body": "Yuklaringizni qayta ishlashga tayyor eng tajribali va ishonchli haydovchilarimiz bilan tanishing."
-      },
-      {
-        "title": "BepulGPS",
-        "body": "Yuk mashinalarini real vaqt rejimida kuzating va yetkazib berishni soddalashtiring."
-      },
-      {
-        "title": "XMed",
-        "body": "XMed – uyingizdan chiqmasdan tibbiy maslahat oladigan, onlayn shifokor qabul tizimi."
-      }
-    ]
-  },
-
-
-"certificateSection": {
-  "badge": "Sertifikatlar",
-  "title": "Sanoat tomonidan e’tirof",
-  "description": "Mukammallikka bo'lgan sadoqatimiz yetakchi sertifikatlar va hamkorliklar orqali tasdiqlangan",
-
-  "cards": [
-    {
-      "title": "TENZOR SOFT",
-      "subtitle": "IT PARK",
-      "focus": "Rasmiy ravishda IT Park rezidenti deb tan olingan",
-      "status": "Tasdiqlangan",
-      "modalTitle" : "IT PRAK",
-      "year": "2021"
-    },
-    {
-      "title": "NOVA RENESSANS",
-      "subtitle": "IT PARK",
-      "focus": "Rasmiy ravishda IT Park rezidenti deb tan olingan",
-      "status": "Tugallangan",
-      "modalTitle" : "IT PRAK",
-      "year": "2025"
-    },
-    {
-      "title": "Frontend Bootcamp",
-      "subtitle": "Dasturlash akademiyasi",
-      "focus": "React, UI/UX va zamonaviy veb texnologiyalar",
-      "status": "Tasdiqlangan",
-      "modalTitle" : "IT PRAK",
-      "year": "2024"
-    }
-  ]
-},
 
 
 

@@ -140,14 +140,14 @@ function Layout() {
 
     return (
         <>
-            <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  px-[20px] md:px-0  ${scrolled ? "bg-black/20 backdrop-blur-lg shadow-md" : "bg-transparent"}`}>
+            <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300  px-[20px] md:px-0  ${scrolled ? "bg-white backdrop-blur-lg shadow-xl" : "bg-transparent"}`}>
 
-                <div className="max-w-[1440px] mx-auto flex justify-between items-center py-4 px-3 2xl:px-0">
+                <div className="max-w-[1440px] mx-auto flex justify-between items-center py-5 px-3 2xl:px-0">
                     <Link to="/">
-                        <img src="/logo/tenzorsoft-logo.png" alt="logo" className="w-[94px] h-[60px] cursor-pointer" onClick={handleLogoClick} />
+                        <img src="/logo/LogoMedPlus.svg" alt="logo" className="w-[113px] h-[24px] cursor-pointer" onClick={handleLogoClick} />
                     </Link>
                     <div className="flex  gap-[58px] items-center">
-                        <div className="flex md:gap-[40px] xl:gap-[56px] text-white items-center hidden lg:flex">
+                        <div className="flex md:gap-[40px]  text-[#000D24] items-center hidden lg:flex">
                             {[
                                 { label: t("navbar.home"), ref: homeRef },
                                 { label: t("navbar.about"), ref: aboutRef },
@@ -156,20 +156,33 @@ function Layout() {
                                 { label: t("navbar.certificates"), ref: certificatesRef },
                                 { label: t("navbar.contact"), ref: contactRef },
                             ].map((item, index) => (
-                                <button key={index} onClick={() => scrollToSection(item.ref)} className="relative text-[18px] cursor-pointer px-1after:content-[''] after:block after:h-[2px] after:w-full after:bg-white after:absolute after:left-0 after:bottom-0 after:scale-x-0 after:origin-center after:transition-transform after:duration-500 after:ease-in-out hover:after:scale-x-100">
-                                    {item.label}
+                                <button
+                                    key={index}
+                                    onClick={() => scrollToSection(item.ref)}
+                                    className="relative text-[16px] cursor-pointer px-2 py-1 group font-mont font-semibold "
+                                >
+                                    <span className="relative z-10">{item.label}</span>
+                                    <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-0 h-0 bg-[#EDEDED] rounded-[8px] transition-all duration-400 ease-in-out group-hover:w-[135px] group-hover:h-[40px]"></span>
                                 </button>
                             ))}
                         </div>
 
-                        <div className="flex gap-6 items-center">
+                        <div className="font-mont font-semibold  text-[16px] flex items-center justify-center gap-[16px]">
+                            <button className="w-[100px] h-[40px] rounded-[8px] flex justify-center items-center hover:border-1 hover:border-[#E90D33] hover:text-[#E90D33] transition-all duration-300 ease-in-out">
+                                Register
+                            </button>
+                            <button className="w-[100px] h-[40px] rounded-[8px] bg-[#E90D33] hover:bg-white border border-[#E90D33] flex justify-center items-center text-white hover:text-[#E90D33] transition-all duration-700 ease-in-out">
+                                Log in
+                            </button>
+                        </div>
+                        {/* <div className="flex gap-6 items-center">
                             <LanguageSelector />
                             <div className=" lg:hidden flex gap-[30px] justify-center items-center ">
                                 <button className="text-white text-[24px]  " onClick={() => setOpen(!open)}>
                                     {open ? "X" : "☰"}
                                 </button>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
