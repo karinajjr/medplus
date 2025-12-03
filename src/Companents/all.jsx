@@ -109,20 +109,38 @@ function all() {
                                 </div>
                             </div>
 
-
-
-
                         </div>
                     </div>
 
                 </section>
 
                 <section className="">
-                    <div className=" max-w-[1440px] mx-auto flex flex-col items-center justify-center space-y-[46px] my-[30px] ">
+                    <div className=" max-w-[1440px] mx-auto  my-[30px] ">
                         <div className=" items-center justify-center flex flex-col text-center">
                             <p className="font-semibold text-[28px] md:text-4xl">Onlayn maslahat xizmatidan foydalanish usullari </p>
                         </div>
+                        <div className="flex justify-between items-center text-[#000D24]">
+                            <div className="space-y-[22px] w-[378px] " >
+                                <h2 className="font-mont font-bold text-[20px] "> Easy In-App Messaging </h2>
+                                <p className="font-mont font-medium text-[16px]"> Send questions, share updates, or receive instructions directly from your doctor in a secure chat environment. </p>
 
+                                <div className=" flex  space-x-[40px] ">
+                                    <button className=" bg-[#FCE3E8] shadow w-[40px] h-[40px] rounded-full hover:border hover:border-[#E90D33]" >
+                                        <i className="bi bi-chevron-left text-[#E90D33]"></i>
+                                    </button>
+
+                                    <button className=" bg-[#FCE3E8] shadow w-[40px] h-[40px] rounded-full hover:border hover:border-[#E90D33]" >
+                                        <i className="bi bi-chevron-right text-[#E90D33]"></i>
+                                    </button>
+                                </div>
+                                <button className="w-[360px] h-[60px] bg-[#E90D33] flex items-center justify-center rounded-[32px] mt-[40px]">
+                                    <h2 className="text-white text-[18px] font-mont font-semibold">Shifokor qabuliga yozilish</h2>
+                                </button>
+                            </div>
+                            <div className="bg-[url('./image/bg.svg')] bg-no-repeat bg-center w-[786px] ">
+                                <img src="./image/Apple-Iphone16pro.avif" className="w-[536px] h-[700px] mt-30" />
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -133,111 +151,3 @@ function all() {
 }
 
 export default all;
-
-
-
-{/* <section ref={aboutRef} id="AboutUs" className=" bg-gradient-to-b from-[#0348A408] to-white flex">
-                    <div className="max-w-[1440px]  mx-auto space-y-[40px] md:space-y-[120px] my-[80px] px-[20px] md:px-2 lg:px-3 2xl:px-0">
-                        <div className="space-y-4 items-center justify-center flex flex-col text-center">
-                            <button className="rounded-full text-[#0349A7] font-medium bg-[#E8F2FF] flex gap-3 w-[220px] h-[50px] md:h-[55px] text-center justify-center items-center">
-                                <img src="/logo/aboutUs.png" className="w-[24px]" />
-                                <h1 className="text-2xl"> {t("aboutSection.badge")}</h1>
-                            </button>
-
-                            <h2 className=" font-semibold text-[28px] md:text-4xl w-[335px] md:w-[560px] ">{t("aboutSection.title")}</h2>
-                            <p className="text-xl w-[335px] md:w-[600px] lg:w-[800px]">{t("aboutSection.subtitle")}</p>
-                            <Link to="/aboutus" className="rounded-[12px] bg-[#006DFF] hover:bg-white hover:border-2 hover:border-[#5492E4] hover:text-[#5492E4] text-white flex gap-3 w-[137px] md:w-[147px] h-[52px] text-center justify-center items-center text-[18px]">
-                                {t("portfolioSection.cta")}
-                            </Link>
-                        </div>
-
-                        <div className="flex flex-col xl:flex-row items-center justify-center gap-[49px]">
-
-                            <img src="/image/AboutUs.png" className="h-[335px] md:h-[687px] w-[335px] md:w-[680px] lg:w-[600px] 2xl:w-[690px] rounded-2xl " />
-
-                            <div className="space-y-[20px]">
-
-                                <div className="space-y-[12px]">
-                                    <h1 className="font-medium text-center text-4xl">
-                                        {t("aboutSection.whyTitle")}
-                                    </h1>
-
-                                    <p className="text-lg text-center w-[335px] sm:w-[360px] md:w-[580px] 2xl:w-[693px]"> {t("aboutSection.whyDescription")}</p>
-                                </div>
-
-                                <div className="grid grid-cols-1 md:grid-cols-2 gap-[10px] lg:gap-[50px] justify-items-center md:justify-items-start">
-
-                                    <div className="space-y-[12px] flex flex-col items-center md:items-start text-center md:text-left">
-                                        <div className="bg-[#FBBF0A] w-[70px] h-[70px] flex items-center justify-center rounded-full">
-                                            <img src="/logo/services.png" className="w-[32px] h-[27px]" />
-                                        </div>
-                                        <div className="space-y-[8px]  w-[260px]">
-                                            <h1 className="font-medium text-xl">
-                                                {t("aboutSection.features.0.title")}
-                                            </h1>
-                                            <p className="text-lg">
-                                                {t("aboutSection.features.0.body")}
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="space-y-[12px] flex flex-col items-center md:items-start text-center md:text-left  w-[271px]">
-                                        <div className="bg-[#3BCEAC] w-[70px] h-[70px] flex items-center justify-center rounded-full">
-                                            <img src="/logo/services4.png" className="w-[32px] h-[27px]" />
-                                        </div>
-                                        <div className="space-y-[8px]">
-                                            <h1 className="font-medium text-xl">
-                                                <Trans i18nKey="aboutSection.features.1.title">
-                                                    <br className="hidden md:block" />
-                                                </Trans>
-                                            </h1>
-                                            <p className="text-lg">
-                                                <Trans i18nKey="aboutSection.features.1.body">
-                                                    <br className="hidden md:block" />
-                                                </Trans>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="space-y-[12px] flex flex-col items-center md:items-start text-center md:text-left  w-[271px]">
-                                        <div className="bg-[#43A7FC] w-[70px] h-[70px] flex items-center justify-center rounded-full">
-                                            <img src="/logo/services2.png" className="w-[32px] h-[27px]" />
-                                        </div>
-                                        <div className="space-y-[8px]">
-                                            <h1 className="font-medium text-xl">
-                                                <Trans i18nKey="aboutSection.features.2.title">
-                                                    <br className="hidden md:block" />
-                                                </Trans>
-                                            </h1>
-                                            <p className="text-lg">
-                                                <Trans i18nKey="aboutSection.features.2.body">
-                                                    <br className="hidden md:block" />
-                                                </Trans>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div className="space-y-[12px] flex flex-col items-center md:items-start text-center md:text-left  w-[271px]">
-                                        <div className="bg-[#D1345B] w-[70px] h-[70px] flex items-center justify-center rounded-full">
-                                            <img src="/logo/services3.png" className="w-[32px] h-[27px]" />
-                                        </div>
-                                        <div className="space-y-[8px]">
-                                            <h1 className="font-medium text-xl">
-                                                <Trans i18nKey="aboutSection.features.3.title">
-                                                    <br className="hidden md:block" />
-                                                </Trans>
-                                            </h1>
-                                            <p className="text-lg">
-                                                <Trans i18nKey="aboutSection.features.3.body">
-                                                    <br className="hidden md:block" />
-                                                </Trans>
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </section> */}
