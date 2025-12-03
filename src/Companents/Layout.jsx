@@ -13,10 +13,8 @@ function Layout() {
 
     const handleLogoClick = () => {
         if (location.pathname === "/") {
-            // если уже на главной — скроллим вверх
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
-        // если НЕ на главной — переход произойдет через Link
     };
 
     //header
@@ -58,40 +56,7 @@ function Layout() {
         setOpen(false);
         ref.current?.scrollIntoView({ behavior: "smooth" });
     };
-    // footer
-    const faqs = [
-        {
-            question: t("faq.item1.question"),
-            answers: [
-                { text: t("faq.item1.home"), ref: homeRef },
-                { text: t("faq.item1.about"), ref: aboutRef },
-                { text: t("faq.item1.services"), link: "/dashboard" },
-                { text: t("faq.item1.portfolio"), link: "/dashboard" },
-                { text: t("faq.item1.certificates"), ref: certificatesRef },
-                { text: t("faq.item1.contact"), ref: contactRef },
-            ]
-        },
-        {
-            question: t("faq.item2.question"),
-            answers: [
-                { text: t("faq.item2.software"), link: "/home" },
-                { text: t("faq.item2.1cProduction"), link: "/register" },
-                { text: t("faq.item2.bitrix"), link: "/dashboard" },
-                { text: t("faq.item2.antivirus"), link: "/dashboard" },
-                { text: t("faq.item2.automation"), link: "/dashboard" },
-                { text: t("faq.item2.biometric"), link: "/dashboard" },
-                { text: t("faq.item2.itservices"), link: "/dashboard" },
-            ]
-        },
-        {
-            question: t("faq.item3.question"),
-            answers: [
-                { text: t("faq.item3.address") },
-                { text: t("faq.item3.phone") },
-                { text: t("faq.item3.email") },
-            ]
-        }
-    ];
+
 
     return (
         <>
@@ -158,140 +123,88 @@ function Layout() {
                 <Outlet context={{ homeRef, aboutRef, contactRef, certificatesRef, servicesRef, portfolioRef }} />
             </main>
 
-       
+
 
             <footer className="bg-[#CC1837]  text-white">
-                <div className="max-w-[1440px] mx-auto flex flex-col py-[70px] space-y-[80px]  px-[20px] md:px-4 lg:px-3 2xl:px-0">
-                    <div className="flex flex-col sm:flex-row sm:justify-between md:items-start gap-3 space-y-6">
-                        <div className="flex flex-col space-y-[19px]">
-                            <img src="/logo/Plusmed.svg" className="w-[94px] h-[60px]" />
-                            <p className="text-xl md:w-[270px] lg:w-[290px] xl:w-[341px]">{t("footer.tagline")}</p>
-                            {/* cылки на сот сети */}
-                            <div className="flex gap-[17px]">
-
-                                <a href="https://www.youtube.com/@TENZORSOFT-ITCOMPANY" target="_blank" rel="noopener noreferrer" >
-                                    <button className="w-[44px] h-[44px] bg-white rounded-[12px] flex items-center justify-center hover:border-2 hover:border-[#0349A7]">
-                                        <img src="/logo/Facebook.png" className="w-[10px]" />
-                                    </button>
-                                </a>
-
-                                <a href="https://www.instagram.com/tenzor_soft/" target="_blank" rel="noopener noreferrer" >
-                                    <button className="w-[44px] h-[44px] bg-white rounded-[12px] flex items-center justify-center hover:border-2 hover:border-[#0349A7]">
-                                        <img src="/logo/instagram.png" className="w-[22px]" />
-                                    </button>
-                                </a>
-
-                                <a href="https://t.me/tenzor_soft" target="_blank" rel="noopener noreferrer" >
-                                    <button className="w-[44px] h-[44px] bg-white rounded-[12px] flex items-center justify-center hover:border-2 hover:border-[#0349A7]">
-                                        <img src="/logo/telegram.png" className="w-[22px]" />
-                                    </button>
-                                </a>
-
-                                <a href="https://www.linkedin.com/in/tenzor-soft-396297329/" target="_blank" rel="noopener noreferrer">
-                                    <button className="w-[44px] h-[44px] bg-white rounded-[12px] flex items-center justify-center hover:border-2 hover:border-[#0349A7]">
-                                        <img src="/logo/linkedin.png" className="w-[22px]" />
-                                    </button>
-                                </a>
-
+                <div className="max-w-[1440px] mx-auto flex flex-col py-[70px]  px-[20px] md:px-4 lg:px-3 2xl:px-0 space-y-[22px]">
+                    <div className="border border-t border-[#FFFFFF33]"></div>
+                    <img src="./logo/plusMedWhite.svg" className="w-[150px] h-[42px]" />
+                    <div className="flex justify-between items-start w-full">
+                        <div className="flex flex-col space-y-[12px] text-[16px]">
+                            <p>Pochta: info@medplus.uz </p>
+                            <div>
+                                <p>Texnik yordam: </p>
+                                <span>+998 99 895 03 03, +998 99 115 04 24 </span>
+                            </div>
+                            <div>
+                                <p>Manzil: </p>
+                                <p className="w-[302px]">   O'zbekiston, Toshkent shahri, Yashnobod tumani, Sarbon ko'chasi 1A. Mo'ljal: Mehmonxona GARNET </p>
+                            </div>
+                            <div>
+                                <p>Ish vaqti: </p>
+                                <p>Dush-Juma, 09:00-18:00</p>
                             </div>
                         </div>
-
-                        <div className="hidden lg:flex flex-col space-y-[16px] text-[#8D8D8D] ">
-                            <h1 className="text-xl font-semibold text-white">
-                                {t("footer.columns.template.title")}
-                            </h1>
-                            <a className="hover:text-white cursor-pointer" onClick={() => scrollToSection(homeRef)}>
-                                {t("footer.columns.template.home")}
-                            </a>
-                            <a className="hover:text-white cursor-pointer" onClick={() => scrollToSection(aboutRef)} >
-                                {t("footer.columns.template.about")}
-                            </a>
-                            <a className="hover:text-white cursor-pointer" onClick={() => scrollToSection(servicesRef)} >
-                                {t("footer.columns.template.services")}
-                            </a>
-                            <a className="hover:text-white cursor-pointer" onClick={() => scrollToSection(portfolioRef)} >
-                                {t("footer.columns.template.portfolio")}
-                            </a>
-                            <a className="hover:text-white cursor-pointer" onClick={() => scrollToSection(certificatesRef)} >
-                                {t("footer.columns.template.certificates")}
-                            </a>
-                            <a className="hover:text-white cursor-pointer" onClick={() => scrollToSection(contactRef)} >
-                                {t("footer.columns.template.contact")}
-                            </a>
+                        <div className="flex flex-col space-y-[12px] text-[16px] ">
+                            <h2 className="font-mont font-bold text-[20px]">Navigatsiya</h2>
+                            <a >Bosh sahifa</a>
+                            <a>Kirish</a>
+                            <a>Kontaktlar</a>
+                            <a className="w-[212px]">Kompaniyani ro'yxatdan o'tkazish</a>
                         </div>
-
-                        <div className="hidden lg:flex flex-col space-y-[16px] text-[#8D8D8D]">
-                            <h1 className="text-xl font-semibold text-white">{t("footer.columns.services.title")}</h1>
-                            <a href="" className="hover:text-white">{t("footer.columns.services.software")}</a>
-                            <a href="" className="hover:text-white">{t("footer.columns.services.1cProduction")}</a>
-                            <a href="" className="hover:text-white">{t("footer.columns.services.bitrix")}</a>
-                            <a href="" className="hover:text-white">{t("footer.columns.services.antivirus")}</a>
-                            <a href="" className="hover:text-white">{t("footer.columns.services.automation")}</a>
-                            <a href="" className="hover:text-white">{t("footer.columns.services.biometric")}</a>
-                            <a href="" className="hover:text-white">{t("footer.columns.services.itservices")}</a>
+                        <div className="flex flex-col space-y-[12px] text-[16px]">
+                            <h2 className="font-mont font-bold text-[20px]">Bemor uchun</h2>
+                            <a>Shifokorlar</a>
+                            <a>Dorixonalar</a>
+                            <a>Klinikalar</a>
+                            <a>Dorilar</a>
+                            <a>Simptomlar</a>
+                            <a>Muolajalar</a>
+                            <a>Yangiliklar</a>
                         </div>
-
-                        <div className="hidden lg:flex flex-col space-y-[16px] text-[#8D8D8D]">
-                            <h1 className="text-xl font-semibold text-white">
-                                {t("footer.columns.contact.title")}
-                            </h1>
-                            <p className="hover:text-white">Tashkent city Mirabad <br /> district st. Magtymguly</p>
-                            <span className="hover:text-white">+998 95 460 10 10</span>
-                            <p className="hover:text-white">info@tenzorsoft.com</p>
-                        </div>
-
-                        <div className="space-y-3">
-                            {/* фак */}
-                            <div className="block lg:hidden w-full">
-                                <div className="space-y-4">
-                                    {faqs.map((faq, index) => (
-                                        <div key={index} className="border-b border-gray-200 shadow-sm">
-                                            <button className="text-left px-1 py-3 flex justify-between items-center w-full  md:w-[420px]" onClick={() => toggleIndex(index)} >
-                                                <span className="font-medium">{faq.question}</span>
-                                                <span className="text-xl">
-                                                    {openIndex === index
-                                                        ? <i className="bi bi-chevron-up"></i>
-                                                        : <i className="bi bi-chevron-down"></i>}
-                                                </span>
-                                            </button>
-
-                                            {openIndex === index && (
-                                                <div className="px-4 pb-4 pt-2 space-y-2">
-                                                    {faq.answers.map((ans, i) => (
-                                                        <button key={i} onClick={() => {
-                                                            navigate(ans?.link || "/");
-                                                            ans.ref?.current?.scrollIntoView({ behavior: "smooth" });
-                                                        }} className="flex flex-col text-white py-2 text-start">
-                                                            {ans.text}
-                                                        </button>
-                                                    ))}
-                                                </div>
-                                            )}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                            {/* сабскрай */}
-                            <div className="flex flex-col space-y-[16px] text-[#8D8D8D]">
-                                <h1 className="text-xl font-semibold text-white">
-                                    {t("footer.subscribeHeading")}
-                                </h1>
-                                <input type="text" id="name" placeholder={t("footer.subscribePlaceholder")} className="md:w-[420px] lg:w-[200px] xl:w-[320px] h-[48px] px-4 py-2 border border-[#8D8D8D] rounded-lg" />
-                                <button className="md:w-[420px] lg:w-[200px] xl:w-[320px] h-[52px] hover:bg-white hover:text-[#006DFF] bg-[#006DFF] hover:border-2 hover:border-[#006DFF] rounded-[12px] font-medium text-white text-lg">
-                                    {t("footer.subscribeCta")}
-                                </button>
-                            </div>
-
+                        <div className="flex flex-col space-y-[12px] text-[16px]">
+                            <h2 className="font-mont font-bold text-[20px]">Foydalanish qoidalari</h2>
+                            <a>Maxfiylik siyosati</a>
+                            <a>Shifokor ommaviy ofertasi</a>
+                            <a>Bemor ommaviy ofertasi</a>
+                            <button className="border-1 border-white w-[189px] h-[60px] rounded-[12px] flex items-center justify-center gap-1">
+                                <img src="./icon/playstorered.svg" alt="" />
+                                <p className="text-white text-[20px] font-medium">PlayMarket</p>
+                            </button>
+                            <button className=" border-1 border-white w-[189px] h-[60px] rounded-[12px] flex items-center justify-center gap-1">
+                                <img src="./icon/applered.svg" />
+                                <p className="text-white text-[20px] font-medium">AppStore</p>
+                            </button>
                         </div>
                     </div>
-
-                    <div className="space-y-3 md:space-y-[40px] text-[#8D8D8D]">
-                        <hr className="border-t border-[#8D8D8D80]" />
-                        <div className="flex flex-col justify-between md:flex-row space-y-4 md:space-y-0 text-center">
-                            <p className="">{t("footer.rights")}</p>
-
+                    <div className="flex justify-between items-center">
+                        <p className="w-[613px]">Saytda taqdim etilgan ma'lumotlar bemorga tashxis qo'yish va davolash uchun ishlatilishi
+                            mumkin emas va shifokorning o'rnini bosa olmaydi.</p>
+                        <div className="flex space-x-[12px] mt-[15px]">
+                            <button className="w-[40px] h-[40px] rounded-full flex items-center justify-center bg-white">
+                                <img src="./icon/youtube.svg" />
+                            </button>
+                            <button className="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
+                                <img src="./icon/instagram.png" />
+                            </button>
+                            <button className="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
+                                <img src="./icon/linkedin.svg" />
+                            </button>
+                            <button className="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
+                                <img src="./icon/telegram.svg" />
+                            </button>
+                            <button className="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
+                                <img src="./icon/facebook.svg" />
+                            </button>
+                            <button className="w-[40px] h-[40px] bg-white rounded-full flex items-center justify-center">
+                                <img src="./icon/chatbubbles.svg" />
+                            </button>
                         </div>
                     </div>
+                    <div className="border border-t border-[#FFFFFF33] mt-[30px]"></div>
+                    <div className=" flex justify-center items-center ">
+                        <p> © 2025 MCHJ «Tenzorsoft». Barcha huquqlar himoyalangan.</p>
+                        </div>
                 </div>
 
             </footer>
