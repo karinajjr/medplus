@@ -1,22 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { useOutletContext } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { Trans } from "react-i18next";
-import Partners from "./partners";
-import { useNavigate } from "react-router-dom";
-import Carousel from "./Carousel";
+import Carousel from "./additional/Carousel";
 
 
 
 function all() {
-    const navigate = useNavigate();
     const { t } = useTranslation();
     const [openId, setOpenId] = useState(null);
 
-    const { homeRef, aboutRef, certificatesRef, servicesRef, portfolioRef } = useOutletContext();
 
-    const users = [
+    const users = [     
         { id: 1, image: "/icon/doktors.svg", profession: "Ginekolog", explanation: "Ayolning salomatligini nazorat qiluvchi mutaxassis" },
         { id: 2, image: "/icon/doktors.svg", profession: "ENT (Otorinolaringologiya)", explanation: "Otorinolaringologlar bilan maslahatlashish va davolash." },
         { id: 3, image: "/icon/doktors.svg", profession: "Allergolog", explanation: "Allergolog - allergik kasalliklarni aniqlash va davolashga ixtisoslashgan shifokor. " },
@@ -34,9 +27,8 @@ function all() {
 
     return (
         <div>
-
             <header className=" text-[#000D24]">
-                <section id="hero" ref={homeRef} className="relative flex items-center text-white h-screen pt-[100px] px-[20px] md:px-2 lg:px-3 2xl:px-0" >
+                <section id="hero" className="relative flex items-center text-white h-screen pt-[100px] px-[20px] md:px-2 lg:px-3 2xl:px-0" >
                     <div className="relative max-w-[1440px] w-full mx-auto">
                         <img src="/baground/heroRight.svg" className="absolute -left-[280px] -top-[170px] h-[848px] hidden md:block" />
 
@@ -77,7 +69,7 @@ function all() {
             </header>
 
             <main className=" ">
-                <section ref={servicesRef} id="Services" className=" relative pt-[1050px]">
+                <section  id="Services" className=" relative pt-[1050px]">
                     <div className=" absolute inset-0 bg-[url('./baground/Ellipse.svg')] h-[792px] bg-no-repeat bg-center flex flex-col space-y-[80px]">
                         <div className=" max-w-[1440px] mx-auto flex flex-col items-center justify-center space-y-[46px] my-[30px] ">
                             <div className=" items-center justify-center flex flex-col text-center">
@@ -137,8 +129,10 @@ function all() {
                                     <h2 className="text-white text-[18px] font-mont font-semibold">Shifokor qabuliga yozilish</h2>
                                 </button>
                             </div>
-                            <div className="bg-[url('./image/bg.svg')] bg-no-repeat bg-center w-[786px] ">
-                                <img src="./image/Apple-Iphone16pro.avif" className="w-[536px] h-[700px] mt-30" />
+                            <div className="relative w-[723px] h-[766px] bg-[url('./image/BgMobile.svg')] bg-no-repeat bg-cover overflow-hidden">
+                                <img src="./image/Apple-Iphone16pro.avif" className="w-[536px] h-[680px] mt-22 " />
+
+                                <div className="absolute bottom-0 left-0 w-full h-160 bg-gradient-to-t from-white to-transparent pointer-events-none"></div>
                             </div>
                         </div>
                     </div>

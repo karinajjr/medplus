@@ -1,12 +1,13 @@
 {
     "navbar": {
-    "home": "Home",
-    "about": "About Us",
-    "services": "Services",
-    "portfolio": "Portfolio",
-    "certificates": "Certificates",
-    "contact": "Contact",
-    "readMore": "Read More"
+    "home": "Bosh sahifa",
+    "doktor": "Shifokorlar",
+    "pharmacy": "Dorixonalar",
+    "clinic": "Klinikalar",
+    "medicines": "Dorilar",
+    "new": "Yangiliklar",
+    "registration": "Royxatdan otish",
+    "singin":"Kirish"
   },
   "hero": {
     "title": "IT solutions <br/> and technologies",

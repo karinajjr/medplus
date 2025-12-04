@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Красная сумка",
+    "description": "Стильная красная сумка из кожи.",
+    "price": 120,
+    "image": "/images/red-bag.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Синяя сумка",
+    "description": "Синяя сумка из плотного текстиля.",
+    "price": 100,
+    "image": "/images/blue-bag.jpg"
+  }
+]

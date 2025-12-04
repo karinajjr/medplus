@@ -1,12 +1,14 @@
 {
   "navbar": {
     "home": "Bosh sahifa",
-    "about": "Biz haqimizda",
-    "services": "Xizmatlar",
-    "portfolio": "Portfolio",
-    "certificates": "Sertifikatlar",
-    "contact": "Bog'lanish",
-    "readMore": "Batafsil o'qish"
+    "doktor": "Shifokorlar",
+    "pharmacy": "Dorixonalar",
+    "clinic": "Klinikalar",
+    "medicines": "Dorilar",
+    "new": "Yangiliklar",
+    "registration": "Royxatdan otish",
+    "singin":"Kirish"
+
   },
   "hero": {
     "title": "Zamonaviy Tibbiyot Sizning Qo'lingizda",

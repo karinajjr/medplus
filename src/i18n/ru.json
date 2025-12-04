@@ -1,12 +1,13 @@
 {
   "navbar": {
-    "home": "Главная",
-    "about": "О нас",
-    "services": "Услуги",
-    "portfolio": "Портфолио",
-    "certificates": "Сертификаты",
-    "contact": "Контакты",
-    "readMore": "Подробнее"
+     "home": "Главная",
+    "doktor": "Докторы",
+    "pharmacy": "Аптеки",
+    "clinic": "Клиника",
+    "medicines": "Лекарства",
+    "new": "Новости",
+    "registration": "Зерегаться",
+    "singin":"Войти"
   }, 
   "hero": {
     "title": "IT-решения <br/> и технологии",

@@ -75,7 +75,7 @@ function Carousel({ cards }) {
       </button>
 
       <button onClick={next} className="absolute right-[-20px] top-1/2 -translate-y-1/2 bg-[#FCE3E8] shadow w-[40px] h-[40px] rounded-full hover:border hover:border-[#E90D33]" >
-       <i class="bi bi-chevron-right text-[#E90D33]"></i>
+       <i className="bi bi-chevron-right text-[#E90D33]"></i>
       </button>
     </div>
   );

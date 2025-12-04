@@ -23,7 +23,7 @@ export default function LanguageSelector() {
         <div className="relative w-fit">
             
             {/* Main button */}
-            <button onClick={() => setOpen(!open)} className="flex items-center justify-center gap-2 px-4 py-2 bg-white hover:border hover:border-[#0349A7] rounded-full shadow-md border border-gray-200 hover:shadow-lg transition-all">
+            <button onClick={() => setOpen(!open)} className="flex items-center justify-center gap-2 px-4 py-2 bg-white hover:border hover:border-[#E90D33] rounded-full shadow-md border border-gray-200 hover:shadow-lg transition-all">
                 <img src="/logo/globe.png" className="w-[15px] mr-1"/>
               
                 <span className="text-sm font-medium text-gray-700">{currentLang.label}</span>
